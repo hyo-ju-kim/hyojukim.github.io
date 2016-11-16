@@ -9,6 +9,20 @@
 <script type="text/javascript" src="javascript/jquery-1.10.2.min.js"></script>	
 <script type="text/javascript" src="javascript/script.js"></script>
 
+<script>
+    $(document).ready(function(){
+        $(".coco-layon").hide();
+        $(".coco-layback").click(function(){
+            $(".coco-layback").hide();
+            $(".coco-layon").show();
+        $(".coco-layon").click(function(){
+            $(".coco-layon").hide();
+            $(".coco-layback").show();
+        });
+        });
+    });
+</script>
+
 </head>
 
 <body>
@@ -20,11 +34,15 @@
             </nav>
     <div class="container">
         <div class="image-box">
-            <img class="mainpage" src="images/mainpage.png">
-            <div class="button-container">
-            <a href="about-page.html"><img class="about-button" src="images/aboutbutton.png"></a>
-            <a href="page-one.html"><img class="enter-button" src="images/enterbutton.png"></a>
-            </div>
+            <img class="mainpage" src="images/page-one.png">
+            <img class="coco-layback" src="images/coco-layback.png">
+            <img class="coco-layon" src="images/coco-lay-on-stomach.png">
+
+    <div class="pre-next-btn">
+        <a href="proto.html"><div class="pre"></div></a>
+        <a href="page-two.html"><div class="next"></div></a>
+    </div><!--pre-next-btn-->
+
         </div><!--image-box-->
     </div><!--container--> 
     </div><!--wrapper-->

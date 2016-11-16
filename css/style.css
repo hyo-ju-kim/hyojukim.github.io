@@ -173,14 +173,14 @@ ul{
 .button:hover {background-color:#CF4230}
 /*hover from w3s*/
 
-#logo{
+.logo{
 	position:relative;
 	width:100px;
 	height:60px;
 	top:10px;
 	left:20px;
 }
-#logo img{
+.logo img{
 	position:absolute;
 	width:40px;
 	height:auto;
