@@ -6,11 +6,14 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/proto-style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/nk-icon.png">
+<link rel="shortcut icon" href="images/nk-icon.ico">
 <script type="text/javascript" src="javascript/jquery-1.10.2.min.js"></script>	
 <script type="text/javascript" src="javascript/script.js"></script>
 
 <script>
     $(document).ready(function(){
+        //main-character
         $(".coco-layon").hide();
         $(".coco-layback").click(function(){
             $(".coco-layback").hide();
@@ -20,9 +23,23 @@
             $(".coco-layback").show();
         });
         });
+        //text-box
+        $(".text-box").hide();
+        $(".text-btn").click(function(){
+            $(".text-box").toggle();
+        });
+
+        $(".main-nav").click(function(){
+            $('.main-nav').animate({right: "0"}, 1000);
+        });
+        
+        $(".pagenav").hide();
+        $(".pagenav-icon").click(function(){
+            $(".pagenav").toggle();
+        });
+    
     });
 </script>
-
 </head>
 
 <body>
@@ -37,6 +54,20 @@
             <img class="mainpage" src="images/page-one.png">
             <img class="coco-layback" src="images/coco-layback.png">
             <img class="coco-layon" src="images/coco-lay-on-stomach.png">
+            <img class="text-box" src="images/p-1-textbox.png">
+            <img class="main-nav" src="images/mainnav.png">  
+            <img class="plant" src="images/plant.png"> 
+            <img class="pre-next-btn-img" src="images/pre-next-btn.png">  
+            <img class="pagenav" src="images/pagenav.png"> 
+            <img class="pagenav-icon" src="images/pagenav-icon.png"> 
+    
+    <div class="pagenav-page">
+    <p>1/12</p>
+    </div><!--pagenav-page-->           
+
+    <div class="text-btn-container">
+        <div class="text-btn"></div>
+    </div>
 
     <div class="pre-next-btn">
         <a href="proto.html"><div class="pre"></div></a>

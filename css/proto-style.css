@@ -25,22 +25,70 @@
 	justify-content: center;
 	height: auto;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .button-container{
 	position: absolute;
 	width: 200px;
-	right: 80px;
+	right: 60px;
 	bottom: 20px;
 }
-.enter-button, .about-button{
+.enter-button{
+	max-width: 180px;
+}
+.about-button{
 	max-width: 200px;
 }
 .mainpage{
 	max-width: 900px;
-	height: 95%;
-	width: 95%;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 }
+.coco{
+	width: 38%;
+	position: absolute;
+	left: 10px;
+	bottom: -20px;
+	animation: bounce 2s infinite ease-in-out;
+	z-index: 1;
+}
+.cards{
+	position: absolute;
+	width: 28%;
+	top: 20px;
+	left: 10px;
+}
+.nk-main-img{
+	position: absolute;
+	width: 65%;
+	bottom: 0;
+	left: 50px;
+	z-index: 0;
+}
+.bag{
+	position: absolute;
+	width: 18%;
+	top: 120px;
+	left: 25%;
+	animation: rotate 1.5s infinite;
+	animation-timing-function: ease-in-out;
+}
+.flag{
+	position: absolute;
+	width: 13%;
+	top: 150px;
+	left: 45%;
+	animation: rotate 2s infinite;
+	animation-timing-function: ease-in-out;
+}
+.title{
+	position: absolute;
+	width: 32%;
+	top: 120px;
+	right: 60px;
+}
+
 /*page-one*/
 .pre-next-btn{
 	width: 100%;
@@ -62,14 +110,102 @@
 	position: absolute;
 	margin: 0 auto;
 	top: 30%;
+	animation: rotate 2s infinite;
+	animation-timing-function: ease-in-out;
 }
 .coco-layon{
 	width: 50%;
 	position: absolute;
 	margin: 0 auto;
 	top: 40%;
+	animation: rotate 2s infinite;
+	animation-timing-function: ease-in-out;
 }
+.text-btn-container{
+	width: 100%;
+	height: 60px;
+	max-width: 860px;
+	position: absolute;
+	margin: 0 auto;
+	top: 50px;
+	display: flex;
+	justify-content: flex-end;
+	background-color: transparent;
+}
+.text-btn{
+	width: 100px;
+	hyphens: 100px;
+	background-color: transparent;
+}
+.text-box{
+	width: 30%;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+}
+.main-nav{
+	width: 20%;
+	position: absolute;
+	right: -120px;
+	top: 90px;
+}
+.plant{
+	width: 20%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	animation: bounce 5s infinite;
+	animation: rotate 4s infinite;
+	animation-timing-function: ease-in-out;
+}
+.pagenav{
+	position: absolute;
+	width: 60%;
+	bottom: -5px;
+}
+.pagenav-icon{
+	position: absolute;
+	width: 13%;
+	bottom: 0;
+}
+.pagenav-page{
+	font-size: 15px;
+	color: #fff;
+	font-weight: 300;
+	width: 100%;
+	height: 60px;
+	max-width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	bottom: -15px;
+	margin-left: -4px;
+	display: flex;
+	justify-content: center;
+}	
 /*page-one*/
+@keyframes bounce {
+  0%   { bottom: -10px; }
+  50% { bottom: 0px; }
+  100% { bottom: -10px; }
+}
+@keyframes rotate {
+   0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.pre-next-btn-img{
+	position: absolute;
+	width: 93%;
+	bottom: 12px;
+}
+
 @media screen and (max-width: 950px){
 .mainpage{
 	max-width: 700px;
@@ -85,6 +221,10 @@
 .pre-next-btn{
 	max-width: 95%;
 }
+.pagenav-page{
+	font-size: 13px;
+	bottom: -23px;
+}
 }
 @media screen and (max-width: 670px){
 .button-container{
@@ -94,12 +234,21 @@
 .enter-button, .about-button{
 	max-width: 130px;
 }
+.pagenav-page{
+	font-size: 11px;
+	bottom: -29px;
+}
 }
 @media screen and (max-width: 414px){
 .button-container{
 	max-width: 100px;
 	right: 20px;
 	bottom: 10px;
+}
+.pagenav-page{
+	font-size: 8px;
+	bottom: -40px;
+	margin-left: -2px;
 }
 .enter-button, .about-button{
 	max-width: 70px;
