@@ -97,7 +97,7 @@ ul{
 .maincontainer img{
 	max-width:850px;
 	position:relative;
-	bottom:-52px;
+	bottom:-79px;
 	display: block;
     margin-left: auto;
     margin-right: auto;
@@ -116,14 +116,13 @@ ul{
 	margin-left:auto;
     margin-right:auto;
     line-height: 1.4;
-	-webkit-animation: opac 1.5s;
-    animation: opac 1.5s
+	/*-webkit-animation: opac 1.5s;
+    animation: opac 1.5s*/
 }
 #page2 .container{
 	bottom:15%;
 }
 
-/*from universidad*/
 @-webkit-keyframes opac {
     from {
         opacity: 0
@@ -140,8 +139,6 @@ ul{
         opacity: 1
     }
 }
-/*transition from universidad*/
-
 
 .content{
 	line-height:1.9;
@@ -355,7 +352,6 @@ ul{
 #page2 .maincontainer{
 	height:1000px;
 }
-
 }
 
 @media (max-width: 400px){
