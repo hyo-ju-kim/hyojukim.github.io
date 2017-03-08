@@ -10,6 +10,8 @@
 <link rel="shortcut icon" href="images/nk-icon.ico">
 <script type="text/javascript" src="javascript/jquery-1.10.2.min.js"></script>	
 <script type="text/javascript" src="javascript/script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -21,15 +23,17 @@
             </nav>
     <div class="container">
         <div class="image-box">
-        <img class="mainpage" src="images/page-four.png">
-        <div id="box1" class="box box1" draggable="true" ondragstart="drag(event)"></div>
-        <div id="box2" class="box box2" draggable="true" ondragstart="drag(event)"></div>
-        <div id="box3" class="box box3" draggable="true" ondragstart="drag(event)"></div>
-        <div id="box4" class="box box4" draggable="true" ondragstart="drag(event)"></div>
-        <div id="box5" class="box box5" draggable="true" ondragstart="drag(event)"></div>
-        <div id="box6" class="box box6" draggable="true" ondragstart="drag(event)"></div>
-        <div id="main-box" class="main-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
+        <img class="mainpage" src="images/page4.png">
+        <!--<p class="inprogress">I'm building this page. </br>It's coming soon!</p> -->
+        <div id="box1" class="box box1">
+             <img src="images/japanese.png">
+        </div>
+        <div id="box2" class="box box2">
+            <img src="images/israeli.png">
+        </div>
+        <div id="main-box" class="main-box ui-widget-header">
+            <p class="correct">Drop me here</p>
+        </div>
 
             <div class="main-nav-container container-open">
             <div class="main-nav">

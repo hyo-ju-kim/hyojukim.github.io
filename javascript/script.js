@@ -75,7 +75,7 @@ $(function(){
             $(".doorOpen").show();
             $(".doorOpen").click(function(){
             	$(".doorOpen").hide();
-            });
+            }); 
 
         });
 
@@ -98,21 +98,35 @@ $(function(){
 
     $(document).ready(function(){
     	$(".notification").css('visibility', 'visible').animate({opacity:1.0}, 2000).delay(3000).fadeOut(800);
+        $(".popup-container").hide();
+        $(".cancle-popup").hide();
+        $(".input-save").click(function(){
+            $(".popup-container").show();
+            $(".cancle-popup").show();
+            }); 
+        $(".save-input").click(function(){
+            $(".warning").css('visibility', 'visible').animate({opacity:1.0}, 1000).delay(1500).fadeOut(800);
+            }); 
     });
 
-    function allowDrop(ev) {
-    ev.preventDefault();
-    }
+     $( function() {
+     $( "#box1" ).draggable({ revert: "valid" });
+     $( "#box2" ).draggable({ revert: "invalid" });
+    
+     $( "#main-box" ).droppable({
+          classes:{
+            "ui-droppable-active": "ui-state-active",
+            "ui-droppable-hover": "ui-state-hover"
+          },
+          drop: function( event, ui ) {
+            $( '#main-box' )
+              .addClass( "ui-state-highlight" ).find( "p" ).html( "No, you can't!" );
+        }
+      });
+     });  
 
-    function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-    }   
 
-    function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
+
 
 // (function(){
 //     var first=true;
