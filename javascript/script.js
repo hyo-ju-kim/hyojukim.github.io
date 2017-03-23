@@ -111,16 +111,15 @@ $(function(){
 
      $( function() {
      $( "#box1" ).draggable({ revert: "valid" });
-     $( "#box2" ).draggable({ revert: "invalid" });
-    
+     $( "#box2" ).draggable({ revert: "valid" });
+     $( "#box3" ).draggable({ revert: "valid" });
+     $( "#box4" ).draggable({ revert: "invalid" });
+     $( "#box5" ).draggable({ revert: "invalid" });
      $( "#main-box" ).droppable({
-          classes:{
-            "ui-droppable-active": "ui-state-active",
-            "ui-droppable-hover": "ui-state-hover"
-          },
+          
           drop: function( event, ui ) {
-            $( '#main-box' )
-              .addClass( "ui-state-highlight" ).find( "p" ).html( "No, you can't!" );
+            $( "#main-box" ).addClass( "ui-state-highlight" ).find( "p" ).html( "Yes, you can!");
+
         }
       });
      });  
