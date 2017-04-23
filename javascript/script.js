@@ -61,8 +61,10 @@ $(function(){
         });
 
         $(".textbox3").hide();
+        $(".text-p").hide();
         $(".text-btn3").click(function(){
             $(".textbox3").toggle();
+            $(".text-p").toggle();
         });
 
         $(".pagenav").hide();
@@ -83,32 +85,123 @@ $(function(){
         	$(".nkflag").animate({transform: "scale(2)"}, 5000, 'linear');
         });
 
+        
+        var time = new Date().getSeconds();
+        var i = time;
+        var num = i++;
+
+//When clicking images, description pops up, then the congrats msg appears.
+//Flag
         $(".nkflag").click(function(){
-        	$(".info1").css('visibility','visible').fadeIn(400);
-        	$(".info1").click(function(){
-        		$(".info1").hide();
+        	$(".flagbox").css('visibility','visible').fadeIn(400);
+        	$(".infobox-button").click(function(){
+                $(".congrats-msg").html(function(){
+                   if (num < 30) {
+                                return "Good Job!";
+                            } else if (num < 60) {
+                                return "Excellent!";
+                            } else {
+                                return "Nice!";
+                            }       
+                });
+        		$(".infobox").css('visibility', 'invisible').fadeOut(300);
+                $(".goodjob").css('visibility','visible').fadeIn(1000).delay(1200).fadeOut(500);
+                stopPropagation();
         	});
         });
+//Tower
+        $(".juchetower").click(function(){
+            $(".juchetowerbox").css('visibility','visible').fadeIn(400);
+            $(".infobox-button").click(function(){
+                $(".congrats-msg").html(function(){
+                   if (num < 30) {
+                                return "Good Job!";
+                            } else if (num < 60) {
+                                return "Excellent!";
+                            } else {
+                                return "Nice!";
+                            }       
+                });
+                $(".infobox").css('visibility', 'invisible').fadeOut(300);
+                $(".goodjob").css('visibility','visible').fadeIn(1000).delay(1200).fadeOut(500);
+                stopPropagation();
+            });
+        });
+//Kim Il Sung Square
+        $(".kimsq").click(function(){
+            $(".kimsqbox").css('visibility','visible').fadeIn(400);
+            $(".infobox-button").click(function(){
+                $(".congrats-msg").html(function(){
+                   if (num < 30) {
+                                return "Good Job!";
+                            } else if (num < 60) {
+                                return "Excellent!";
+                            } else {
+                                return "Nice!";
+                            }       
+                });
+                $(".infobox").css('visibility', 'invisible').fadeOut(300);
+                $(".goodjob").css('visibility','visible').fadeIn(1000).delay(1200).fadeOut(500);
+                stopPropagation();
+            });
+        });
+
+//Main Nav Red Tag
         $(".redtag").click(function(){
             $(".container-open").toggleClass("main-nav-container");
-        });
-    
-    });
-
-
+        });    
+    });  
+//Notification Msg
     $(document).ready(function(){
-    	$(".notification").css('visibility', 'visible').animate({opacity:1.0}, 2000).delay(3000).fadeOut(800);
-        $(".popup-container").hide();
-        $(".cancle-popup").hide();
-        $(".input-save").click(function(){
-            $(".popup-container").show();
-            $(".cancle-popup").show();
+    	$(".notification-box").css('visibility', 'visible').animate({opacity:1.0}, 2000).delay(3000).fadeOut(800);
+//Card Function        
+        $(".popup-container, .cancle-popup, .card-popup-wrap, .card-popup ").hide();
+        $(".card").click(function(){
+            $(".card-popup-wrap, .card-popup").show();
             }); 
-        $(".save-input").click(function(){
-            $(".warning").css('visibility', 'visible').animate({opacity:1.0}, 1000).delay(1500).fadeOut(800);
+        $(".cancel-btn").click(function(){
+            $(".card-popup-wrap, .card-popup").fadeOut(300);
+        });
+        $(".card-save-btn").click(function(){
+            $(".message-popup-saved").css('visibility', 'visible').fadeIn(500);
+            $(".card-popup-wrap, .card-popup").fadeOut(300);           
             }); 
+        $(".cancel-btn-container").click(function(){
+            $(".message-popup-saved").fadeOut(200);
+        });
+//Brush Function
+        $(".brushbox").hide();
+        $(".brush").click(function(){
+            $(".brush, .cancel-btn").hide();
+            $(".card-popup").css('background-color','transparent');
+            $( ".big" ).addClass( "big-added" );
+            $(".brushbox").fadeIn(500);
+            $(".done-btn").click(function(){
+                $(".big").removeClass("big-added").hide();
+                $(".card-popup").css('background-color','white');
+                $(".brush, .cancel-btn").show();
+                $(".brushbox").fadeOut(500);
+            });
+        });
     });
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
 
+    var dropdowns = document.getElementsByClassName("fa-caret-down");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+//Drag & Drop
      $( function() {
      $( "#box1" ).draggable({ revert: "valid" });
      $( "#box2" ).draggable({ revert: "valid" });
@@ -119,13 +212,9 @@ $(function(){
           
           drop: function( event, ui ) {
             $( "#main-box" ).addClass( "ui-state-highlight" ).find( "p" ).html( "Yes, you can!");
-
         }
       });
      });  
-
-
-
 
 // (function(){
 //     var first=true;
@@ -136,3 +225,4 @@ $(function(){
 //         }
 //     });
 // })();
+

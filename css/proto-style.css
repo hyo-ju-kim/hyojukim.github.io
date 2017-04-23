@@ -1,17 +1,15 @@
 .proto-wrapper{
 	position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    background-color: #444;
+    display: flex;
+	justify-content: center;
 }
 .container{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 100%;
+	width: 1080px;
 	text-align: center;
 	height: 100%;
 	position: relative;
@@ -20,6 +18,9 @@
 	left: 0;
 	-webkit-animation: opac 0.5s;
     animation: opac 0.5s;
+}
+.ipad-platform{
+	position: absolute;
 }
 .image-box{
 	display: flex;
@@ -47,11 +48,11 @@
 	margin: 0 auto;
 }
 .coco{
-	width: 43%;
+	width: 41%;
 	position: absolute;
-	left: 1%;
+	left: 0%;
 	bottom: -20px;
-	animation: bounce 2s infinite ease-in-out;
+	animation: coco 2s infinite ease-in-out;
 	z-index: 1;
 }
 .cards{
@@ -99,7 +100,7 @@
 	display: flex;
 	justify-content: space-between;
 	right: 1%;
-	z-index: 10;
+	z-index: 100;
 }
 .pre, .next{
 	width: 60px;
@@ -162,12 +163,29 @@
 	background-color: transparent;
 	z-index: 10;
 }
+.textbox-container{
+	width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 19%;
+    right: 20%;
+    display: flex;
+    justify-content: center;
+}
+.text-p-wrap{
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    height: auto;
+    z-index: 11;
+    font-size: 17.5px;
+    line-height: 1.5;
+}
 .textbox3{
-	width: 38%;
-	position: absolute;
-	top: 33%;
-	right: 26%;
-	z-index: 10;
+	width: 100%;
+	height: auto;
+    z-index: 10;
+    opacity: 0.93;
 }
 .text-btn3{
 	width: 100px;
@@ -262,7 +280,7 @@
 	width: 52%;
 	height: auto;
 	right: 11%;
-	z-index: 10;
+	z-index: 28;
 	top: 18%;
 }
 .my-public-btn{
@@ -270,7 +288,7 @@
 	width: 65%;
 	height: auto;
 	right: 5%;
-	z-index: 10;
+	z-index: 28;
 	top: 38%;
 }
 .publicgallery{
@@ -278,7 +296,7 @@
 	width: 35%;
 	height: 15%;
 	right: 5%;
-	z-index: 10;
+	z-index: 28;
 	top: 48%;
 }
 .mute{
@@ -286,7 +304,7 @@
 	width: 48%;
 	height: auto;
 	right: 8%;
-	z-index: 10;
+	z-index: 28;
 	top: 56%;
 }
 .settings{
@@ -294,7 +312,7 @@
 	width: 42%;
 	height: auto;
 	right: 12%;
-	z-index: 10;
+	z-index: 28;
 	top: 72%;
 }
 .redtag{
@@ -303,7 +321,7 @@
 	position: absolute;
 	left: 10px;
 	top: 44%;
-	z-index: 10;
+	z-index: 28;
 }
 .container-open{
 	width: 25%;
@@ -311,7 +329,7 @@
 	position: absolute;
 	right: 0;
 	top: 17%;
-	z-index: 10;
+	z-index: 100;
 }
 .main-nav-container{
 	width: 25%;
@@ -319,14 +337,14 @@
 	position: absolute;
 	right: -14%;
 	top: 17%;
-	z-index: 10;
+	z-index: 28;
 }
 .home-btn{
 	position: absolute;
 	width: 60%;
 	right: 9%;
 	height: auto;
-	z-index: 1;
+	z-index: 28;
 }
 .main-nav{
 	width: 70%;
@@ -334,7 +352,7 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	z-index: 1;
+	z-index: 28;
 	height: 100%;
 }	
 .nav-spr{
@@ -342,7 +360,7 @@
 	position: absolute;
 	right: 0;
 	top: 2%;
-	z-index: 1;
+	z-index: 27;
 	height: auto;
 }
 .plant{
@@ -359,10 +377,11 @@
 	position: absolute;
 	width: 60%;
 	bottom: -5px;
+	z-index: 100;
 }
 .pagenav-icon{
 	bottom: 0;
-	z-index: 1;
+	z-index: 100;
 	width: 90%;
 	height: auto;
 	margin-left: 0;
@@ -375,7 +394,7 @@
 	right: 45%;
 	width: 10%;
 	height: 10%;
-	z-index: 11;
+	z-index: 101;
 }
 .pagenav-page{
 	font-size: 13px;
@@ -385,7 +404,7 @@
 	height: 65%;
 	position: absolute;
 	bottom: 0;
-	z-index: 1;
+	z-index: 100;
 }	
 .case1{
 	position: absolute;
@@ -489,7 +508,7 @@
 }
 .coco-page3{
 	position: absolute;
-	width: 50%;
+	width: 44%;
 	bottom: -8px;
 	right: 3%;
 	animation: rotateTwo 4s infinite;
@@ -517,6 +536,25 @@
 	left: 10%;
 	opacity: 0.0;
 	visibility: hidden;
+}
+.notification-box{
+	position: absolute;
+	top: 5%;
+	left: 13%;
+	display: block;
+	background-color: white;
+	width: 30%;
+	height: 6%;
+	opacity: 0.0;
+	visibility: hidden;
+	border-radius: 10px;
+	z-index: 100;
+}
+.notification-page-two{
+	left: 3%;
+}
+.notification-box p{
+	margin-top: 10px;
 }
 .card{
 	position: absolute;
@@ -585,10 +623,600 @@
 	right: 3%;
 	position: absolute;
 }
+.infobox{
+	position: absolute;
+	width: 40%;
+	height: 70%;
+	background-color: white;
+	top: 15%;
+	left: 30%;
+	right: 30%;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(68,68,68,0.6);
+	visibility: hidden;
+}
+.infobox-img{
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 40%;
+	background-color: #f2ebd4;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	justify-content: center;
+	margin: 0 auto;
+}
+.img-in-box{
+	position: absolute;
+	top: 13%;
+	left: 19%;
+}
+.infobox-description{
+	width: 100%;
+	height: 49%;
+	position: relative;
+
+}
+.infobox-button{
+	position: relative;
+	width: 100%;
+	height: 11%;
+	background-color: #94c94a;
+	border-bottom-right-radius: 10px; 
+	border-bottom-left-radius: 10px;
+	font-family: 'Maiden Orange', cursive;
+}
+.infobox-text-container{
+	width: 85%;
+	margin: 0 auto;
+	padding: 5px;
+	line-height: 1.6;
+}
+.gotit{
+	font-size: 28px;
+	margin: 0;
+	padding: 10px;
+	color: green;
+	letter-spacing: 0.5px;
+	z-index: 10;
+}
+.goodjob{
+	position: absolute;
+	top: 34%;
+	z-index: 11;
+	visibility: hidden;
+}
+.congrats-msg{
+	font-family: 'Maiden Orange', cursive;
+	font-size: 28px;
+	margin: 0;
+	color: #444;
+	text-shadow: 0 0 30px #ffffff;
+}
+.card-popup{
+	position: absolute;	
+	width: 85%;
+	height: 85%;
+	background-color: white;
+	border-radius: 10px;
+	top: 8%;
+	left: 8%;
+	margin: 0 auto;
+	z-index: 110;
+}
+.card-popup-wrap{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: grey;
+	opacity: 0.7;
+	z-index: 109;
+}
+.cancel-btn{
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: -8px;
+	right: -8px;
+	z-index: 21;
+}
+.capture{
+	width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    z-index: 22;
+}
+.doodled{
+	width: 334px;
+    height: 246px;
+    position: absolute;
+    top: 8%;
+    left: 27.7%;
+    z-index: 23;
+}
+.big{
+	width: 334px;
+    height: 246px;
+    position: absolute;
+    top: 8%;
+    left: 27.7%;
+    z-index: 24;
+}
+.card-save-btn{
+	width: 20%;
+	height: 8%;
+	background-color: #94c94a;
+	position: absolute;
+	bottom: 3%;
+	left: 40%;
+}
+.save-btn{
+	font-size: 28px;
+	margin: 0;
+	padding: 8px;
+	color: green;
+	letter-spacing: 0.5px;
+	z-index: 10;
+	font-family: 'Maiden Orange', cursive;
+}
+.form-group{
+	position: absolute;
+	width: 25%;
+	z-index: 22;
+	bottom: 33%;
+	left: 23%;
+	letter-spacing: 0.5px;
+}
+.grouptwo{
+	margin-left: 230px;
+}
+.groupthree{
+	position: absolute;
+	width: 40%;
+	bottom: 20%;
+	left: 30%;
+}
+.labelthree{
+	margin-left: -85px;
+}
+/*referred to CSS-TRICKS*/
+.form-group .control-label {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 25px;
+  font-weight: lighter;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  font-family: 'Maiden Orange', cursive;
+  left: 38%;
+  opacity: 0.5;
+}
+.form-group .bar {
+  position: relative;
+  border-bottom: 0.2rem solid #c5a93b;
+  display: block;
+}
+.form-group input,
+.form-group textarea {
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border-width: 0;
+  border-color: transparent;
+  line-height: 1.9;
+  width: 100%;
+  color: transparent;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  box-shadow: none;
+}
+.form-group input[type="file"] {
+  line-height: 1;
+}
+.form-group input[type="file"] ~ .bar {
+  display: none;
+}
+.form-group select,
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+  color: #927f33;
+  font-family: 'Maiden Orange', cursive;
+  font-size: 1.8em;
+  margin-bottom: -10px;
+}
+.form-group select ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group input:valid ~ .control-label,
+.form-group input.form-file ~ .control-label,
+.form-group input.has-value ~ .control-label,
+.form-group textarea:focus ~ .control-label,
+.form-group textarea:valid ~ .control-label,
+.form-group textarea.form-file ~ .control-label,
+.form-group textarea.has-value ~ .control-label {
+  /*font-size: 1rem;
+  color: gray;
+  top: -1rem;
+  left: 0;*/
+  display: none;
+}
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+/*.form-group select:focus ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group textarea:focus ~ .control-label {
+  color: #444;
+  font-size: 1em;
+}*/
+/*.form-group select:focus ~ .bar::before,
+.form-group input:focus ~ .bar::before,
+.form-group textarea:focus ~ .bar::before {*/
+  /*width: 100%;*/
+  /*left: 20%;*/
+}
+/*referred to CSS-TRICKS*/
+.labelTwo{
+	position: absolute;
+	right: 0;
+}
+.form-group input{
+	text-align: center;
+}
+.message-popup-saved{
+	position: absolute;
+	width: 40%;
+	height: 70%;
+	background-color: white;
+	top: 15%;
+	left: 30%;
+	right: 30%;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(68,68,68,0.6);
+	visibility: hidden;
+}
+.upperbox{
+	background-color: #98ca52;
+	width: 100%;
+	height: 35%;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.bottombox{
+	width: 100%;
+	height: 65%;
+	background-color: white;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	display: flex;
+	flex-wrap: row;
+	justify-content: space-around;
+	font-family: 'Maiden Orange', cursive;
+	font-size: 20px;
+}
+.img-public{
+	position: relative;
+	width: 31%;
+	height: 30%;
+	top: 44%;
+	margin-left: 8px;
+}
+.img-my{
+	position: relative;
+	width: 28%;
+	height: 30%;
+	top: 40%;
+	margin-right: 15px;
+}
+.bottom-p{
+	position: relative;
+	display: block;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: #b3b3b3;
+	letter-spacing: 0.5px;
+}
+.bottom-p-a{
+	text-decoration: none;
+}
+.party{
+	position: relative;
+}
+.circle{
+	position: absolute;
+    top: 25%;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+}
+.confirm-msg{
+	width: 100%;
+    position: absolute;
+    margin: 0;
+    z-index: 13;
+    top: 46%;
+    font-size: 1.4em;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+}
+.fa{
+	margin-top: 10px;
+	color: #98ca52;
+}
+.cancel-btn-upperbox{
+	width: 35px;
+	height: 35px;
+}
+.cancel-btn-container{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	z-index: 21;
+}
+#brush{
+	color: white;
+	z-index: 24;
+	margin: 0;
+	padding: 4px;
+	font-size: 14px;
+}
+.brush{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 7.8%;
+	right: 28.8%;
+	background-color: #444;
+	z-index: 111;
+}
+.big-added{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+.brushbox{
+	position: absolute;
+	width: 10%;
+	height: 80%;
+	right: 5%;
+	top: 12%;
+	z-index: 111;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+}
+.color{
+	display: flex;
+	width: 40px;
+	height: 40px;
+	background-color: orange;
+	margin-left: 15px;
+	border-radius: 50%;
+	z-index: 27;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+.black{
+	background-color: #444;
+}
+.red{
+	background-color: #c44323;
+}
+.yellow{
+	background-color: #fad60e;
+}
+.green{
+	background-color: #28c651;
+}
+.done-btn{
+	border-radius: 5px;
+	height: 25px;
+	width: 50px;
+	left: 0;
+	background-color: #94c94a;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.eraser{
+	background-color: transparent;
+	box-shadow: none;
+}
+.done{
+	padding: 0;
+	margin: 0;
+	color: green;
+	margin: 0 auto;
+	font-weight: 300;
+	font-family: 'Maiden Orange', cursive;
+	letter-spacing: 0.5px;
+	font-size: 18px;
+	margin-top: 3px;
+}
+.title-gallery{
+	position: absolute;
+    top: 3%;
+    left: 42%;
+    font-family: 'Maiden Orange', cursive;
+    letter-spacing: 1.3px;
+    font-size: 30px;
+    color: #367388;
+}
+.captured-img-container{
+	position: absolute;
+    width: 25%;
+    height: 35%;
+    left: 8%;
+    top: 19%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(68,68,68,0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.captured-img-container-two{
+	position: absolute;
+    width: 25%;
+    height: 35%;
+    left: 37%;
+    top: 19%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(68,68,68,0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.captured-img-container-three{
+	position: absolute;
+    width: 25%;
+    height: 35%;
+    left: 67%;
+    top: 19%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(68,68,68,0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.captured-img-container-four{
+	position: absolute;
+    width: 25%;
+    height: 35%;
+    left: 8%;
+    bottom: 8%;
+    background-color: #fdf6ed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(68,68,68,0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.captured-img-container-five{
+	position: absolute;
+    width: 25%;
+    height: 35%;
+    left: 37%;
+    bottom: 8%;
+    background-color: #fdf6ed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(68,68,68,0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.captured-img-container-six{
+	position: absolute;
+    width: 25%;
+    height: 35%;
+    left: 67%;
+    bottom: 8%;
+    background-color: #fdf6ed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(68,68,68,0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.img-in-public{
+	width: 100%;
+	height: 70%;
+	background-color: #fdf6ed;
+}
+.reaction-in-public{
+	width: 100%;
+	height: 17%;
+	background-color: white;
+}
+.name-in-public{
+	width: 100%;
+	height: 13%;
+	background-color: #ecfaff;
+}
+.img-in-container{
+	width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.reaction-p{
+	font-family: 'Maiden Orange', cursive;
+	letter-spacing: 0.5px;
+	font-size: 23px;
+	color: #444;
+	margin-top: 8px;
+}
+.name{
+	font-size: 14px;
+	color: #888;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0;
+}
+.heart{
+  	color: white;
+    z-index: 28;
+    margin: 0;
+    padding: 7px;
+}
+.heart-circle{
+	border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    background-color: #ccc;
+    position: absolute;
+    right: 12%;
+    bottom: 16%;
+    display: flex;
+    justify-content: center;
+}
+.heart:hover{
+	color: #cc2b2b;
+}
+.heart-circle:hover{
+	background-color: #ffe0e0;
+}
+.like{
+	font-size: 9px;
+    position: absolute;
+    right: -17px;
+}
+.zero{
+	right: -10px;
+}
+.long{
+	right: -18px;
+}
+.title-mygallery{
+	color: #986e28;
+	letter-spacing: 1px;
+	margin-left: 10px;
+}
 @keyframes bounce {
   0%   { bottom: -10px; }
   50% { bottom: 0px; }
   100% { bottom: -10px; }
+}
+@keyframes coco {
+  0%   { bottom: -30px; }
+  50% { bottom: -20px; }
+  100% { bottom: -30px; }
 }
 @keyframes bounceTwo {
   0%   { bottom: -5px; }
@@ -728,7 +1356,6 @@
 }
 .box{
 	width: 100%;
-	max-height: 200px;
 	max-width: 110px;
 	position: absolute;
 	z-index: 100;
@@ -798,7 +1425,65 @@
 .ui-state-hover{
 	background-color: yellow;
 }
-/*page-four*/
+/*Dropdown*/
+.dropbtn {
+    background-color: #f4f4f4;
+    color: #ccc;
+    padding: 0;
+    margin: 0 0 8px 70px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Maiden Orange', cursive;
+    width: 150px;
+    height: 40px;
+    letter-spacing: 0.5px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #eee;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    right: 0;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {
+	display:block;
+	height: 160px;
+	overflow: scroll;
+}
+.fa-caret-down{
+	color: #ccc;
+	float: right;
+	margin: 0;
+	margin-right: 15px;
+}
+/*back-btn*/
+.back-btn{
+	position: absolute;
+	top: 10%;
+	left: 7%;
+	width: 40px;
+	height: 40px;
+	z-index: 100;
+}
 @media screen and (max-width: 950px){
 .pre-next-btn{
 	max-width: 95%;
